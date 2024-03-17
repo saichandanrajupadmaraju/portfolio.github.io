@@ -87,9 +87,9 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('https://raw.githubusercontent.com/saichandanrajupadmaraju/Imsaichandanraju.github.io/main/images/home.jpg') no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
+    background: url('https://raw.githubusercontent.com/saichandanrajupadmaraju/Imsaichandanraju.github.io/main/images/home.jpg') no-repeat ;
+    background-size: cover ;
+    background-position: center ;
 }
 
 .home-content {
