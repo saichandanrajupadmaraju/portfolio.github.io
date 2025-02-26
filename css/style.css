@@ -104,6 +104,21 @@ section {
     opacity: 0.8; /* Adjust opacity if needed */
 }
 
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover {
+    background: var(--bg-color);
+    opacity: .8;
+}
+
 /* ✨ Add Glow Effect */
 .home::before {
     content: "";
