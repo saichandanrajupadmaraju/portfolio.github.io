@@ -88,7 +88,10 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 0 9%;
-    background: url('https://raw.githubusercontent.com/saichandanrajupadmaraju/portfolio.github.io/main/images/home.jpg') no-repeat center;
+    background-image: url('https://saichandanrajupadmaraju.github.io/portfolio.github.io/images/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
