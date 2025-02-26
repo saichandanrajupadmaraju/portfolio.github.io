@@ -104,6 +104,9 @@ section {
     font-weight: 700;
     line-height: 1.3;
 }
+strong {
+    font-weight: bold;
+}
 
 .home-content h1 span {
     color: var(--text-color);
