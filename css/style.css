@@ -268,19 +268,27 @@ strong {
     width: 100%;
 }
 
-.home-imgHover {
+.home-img {
     position: absolute;
     top: 0;
     right: 0;
     width: 45%;
-    height: 100%;
-    background: transparent;
-    transition: 3s;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.home-imgHover:hover {
-    background: var(--bg-color);
-    opacity: .8;
+.home-img img {
+    width: 100%;  /* Adjust to fit container */
+    max-width: 400px; /* Prevent oversized image */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 0 20px rgba(0, 171, 240, 0.3); /* Add a glow effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-img img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* ======= About Section Styling ======= */
