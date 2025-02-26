@@ -88,9 +88,9 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 0 9%;
-    background: url('images/home.jpg') no-repeat center;
-    background-size: cover;
-    background-position: right;
+    background: url('https://raw.githubusercontent.com/saichandanrajupadmaraju/portfolio.github.io/main/images/home.jpg') no-repeat center center;
+background-size: cover;
+background-attachment: fixed;
     height: 100vh;
     position: relative;
     transition: all 0.5s ease-in-out;
