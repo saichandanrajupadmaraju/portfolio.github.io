@@ -88,7 +88,7 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 0 9%;
-    background: url('images/home.jpg') no-repeat center;
+    background: url('https://raw.githubusercontent.com/saichandanrajupadmaraju/portfolio.github.io/main/images/home.jpg') no-repeat center;
     background-size: cover;
     background-position: right;
     height: 100vh;
@@ -96,11 +96,41 @@ section {
     transition: all 0.5s ease-in-out;
 }
 
-/* Add Glow on Hover */
-.home:hover {
-    box-shadow: 0 0 30px rgba(0, 171, 240, 0.5); /* Neon glow effect */
-    filter: brightness(1.2) contrast(1.1); /* Make it pop */
+/* ✨ Add Glow Effect */
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;  /* Change from right to left */
+    width: 100%; /* Cover entire background */
+    height: 100%;
+    background: rgba(0, 171, 240, 0.2);
+    box-shadow: 0 0 30px rgba(0, 171, 240, 0.8);
+    filter: blur(15px);
+    z-index: 0;
+    animation: glowEffect 3s infinite alternate ease-in-out;
 }
+
+
+/* 🔄 Glow Animation */
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 171, 240, 0.6);
+        filter: blur(5px);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(0, 171, 240, 1);
+        filter: blur(15px);
+    }
+}
+
+/* 🚀 Hover Effect: Pulsating Glow */
+.home:hover::before {
+    box-shadow: 0 0 60px rgba(0, 171, 240, 1), 0 0 80px rgba(0, 171, 240, 0.8);
+    filter: blur(25px);
+    transition: 0.3s ease-in-out;
+}
+
 
 
 .home-content {
@@ -196,14 +226,10 @@ strong {
 }
 
 .btn-box .btn:hover {
-    background: var(--bg-color);
-    color: var(--main-color);
-    border-color: var(--main-color);
+    transform: scale(1.05);  /* Slight pop effect */
+    transition: transform 0.3s ease-in-out;
 }
 
-.btn-box .btn:hover {
-    color: var(--main-color);
-}
 
 .btn-box .btn:nth-child(2) {
     background: transparent;
@@ -279,28 +305,6 @@ strong {
     width: 100%;
 }
 
-.home-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-img img {
-    width: 100%;  /* Adjust to fit container */
-    max-width: 400px; /* Prevent oversized image */
-    border-radius: 50%; /* Make it circular */
-    box-shadow: 0 0 20px rgba(0, 171, 240, 0.3); /* Add a glow effect */
-    transition: transform 0.3s ease-in-out;
-}
-
-.home-img img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
 
 /* ======= About Section Styling ======= */
 .about {
@@ -1179,22 +1183,15 @@ section:nth-child(odd) .animate.scroll,
     }
 
     .navbar {
-        position: absolute;
-        top: 100%;
-        left: -100%;
-        width: 100%;
-        padding: 1rem 4%;
-        background: var(--main-color);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        z-index: 1;
-        transition: .25s ease;
-        transition-delay: .25s;
-    }
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
 
-    .navbar.active {
-        left: 0;
-        transition-delay: 0s;
-    }
+.navbar.active {
+    opacity: 1;
+    visibility: visible;
+}
 
     .navbar .active-nav {
         position: absolute;
@@ -1228,11 +1225,6 @@ section:nth-child(odd) .animate.scroll,
         transition-delay: .25s;
     }
 
-    .home-imgHover {
-        pointer-events: none;
-        background: var(--bg-color);
-        opacity: .6;
-    }
 }
 
 @media (max-width: 520px) {
