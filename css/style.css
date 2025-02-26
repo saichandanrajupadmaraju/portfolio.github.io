@@ -86,11 +86,22 @@ section {
 .home {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 9%;
-    background: url('https://raw.githubusercontent.com/saichandanrajupadmaraju/portfolio.github.io/main/images/home.jpg') no-repeat ;
-    background-size: cover ;
-    background-position: center ;
+    background: url('images/home.jpg') no-repeat center;
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+    position: relative;
+    transition: all 0.5s ease-in-out;
 }
+
+/* Add Glow on Hover */
+.home:hover {
+    box-shadow: 0 0 30px rgba(0, 171, 240, 0.5); /* Neon glow effect */
+    filter: brightness(1.2) contrast(1.1); /* Make it pop */
+}
+
 
 .home-content {
     max-width: 60rem;
