@@ -15,7 +15,7 @@ function sendEmail() {
     );
 }
 
-form.addEventListener("Submit", (e) => {
+form.addEventListener("submit", (e) => { 
     e.preventDefault();
 
     sendEmail();
