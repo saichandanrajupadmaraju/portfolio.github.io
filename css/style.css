@@ -84,13 +84,12 @@ section {
 }
 
 .home {
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 9%;
-    height: 100vh;
-    overflow: hidden;
+    background: url('/images/home.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .home-bg {
