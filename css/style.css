@@ -126,6 +126,17 @@ section {
     display: none;
 }
 
+.home {
+    position: relative;
+    z-index: 10;
+}
+
+.home-content, .home-img {
+    position: relative;
+    z-index: 11;
+}
+
+
 
 
 /* 🔄 Glow Animation */
