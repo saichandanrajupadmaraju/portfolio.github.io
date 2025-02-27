@@ -83,7 +83,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 9%;
-    background: url('YOUR_DIRECT_IMAGE_LINK') no-repeat right center / cover;
+    background: url('https://raw.githubusercontent.com/saichandanrajupadmaraju/portfolio.github.io/main/images/home.jpg') no-repeat right center / cover;
     height: 100vh;
     position: relative;
 }
